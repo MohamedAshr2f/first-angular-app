@@ -1,6 +1,8 @@
 <div> 
     <button>
-        <img/>
-        <span>Name</span>
+        <img [src]="'assets/users/'+selecteduser.avatar" 
+        [alt]="selecteduser.name" />
+
+        <span>{{selecteduser.name}}</span>
     </button>
 </div>
