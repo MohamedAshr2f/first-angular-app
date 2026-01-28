@@ -9,4 +9,11 @@ let randomuser=Math.floor(Math.random()*DUMMY_USERS.length);
 })
 export class User {
 selecteduser=DUMMY_USERS[randomuser];
+get imagePath(){
+  return 'assets/users/'+this.selecteduser.avatar;
+}
+selectuser(){
+  randomuser=Math.floor(Math.random()*DUMMY_USERS.length);
+  this.selecteduser=DUMMY_USERS[randomuser];
+}
 }
