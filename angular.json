@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "33cd3b8a-9ca8-497d-8aad-e8ffd3e1fbd7"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -22,6 +23,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "oublic/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
