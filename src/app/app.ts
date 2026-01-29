@@ -21,6 +21,5 @@ export class App {
   onselectuser(userId:string){
     this.selectedUserId=userId;
     console.log("selected user id:",userId);
-
   }
 }

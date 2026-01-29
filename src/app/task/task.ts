@@ -8,4 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class Task {
 @Input() name!:string;
+@Input() avatar!:string;
+get imagePath(){
+  return 'assets/users/'+this.avatar;
+}
 }
