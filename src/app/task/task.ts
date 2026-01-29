@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './task.css',
 })
 export class Task {
-@Input() name!:string;
-@Input() avatar!:string;
+@Input() name?:string;
+@Input() avatar?:string;
 get imagePath(){
   return 'assets/users/'+this.avatar;
 }

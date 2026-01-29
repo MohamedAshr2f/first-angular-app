@@ -16,7 +16,7 @@ export class App {
   selectedUserId='u1';
   protected readonly title = signal('first-angular-app');
   get selectedUser(){
-    return this.user.find(u=>u.id===this.selectedUserId)!;
+    return this.user.find(u=>u.id===this.selectedUserId);
   }
   onselectuser(userId:string){
     this.selectedUserId=userId;
