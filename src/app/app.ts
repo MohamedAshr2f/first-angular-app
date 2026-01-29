@@ -13,8 +13,14 @@ import { Task } from "./task/task";
 })
 export class App {
   user=DUMMY_USERS;
+  selectedUserId='u1';
   protected readonly title = signal('first-angular-app');
+  get selectedUser(){
+    return this.user.find(u=>u.id===this.selectedUserId)!;
+  }
   onselectuser(userId:string){
+    this.selectedUserId=userId;
     console.log("selected user id:",userId);
+
   }
 }
