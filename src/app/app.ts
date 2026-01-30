@@ -12,11 +12,11 @@ import { Task } from "./task/task";
   styleUrl: './app.css'
 })
 export class App {
-  user=DUMMY_USERS;
+  users=DUMMY_USERS;
   selectedUserId='u1';
   protected readonly title = signal('first-angular-app');
   get selectedUser(){
-    return this.user.find(u=>u.id===this.selectedUserId);
+    return this.users.find(u=>u.id===this.selectedUserId);
   }
   onselectuser(userId:string){
     this.selectedUserId=userId;

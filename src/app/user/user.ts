@@ -1,20 +1,20 @@
 import { Component,Output,Input, EventEmitter } from '@angular/core';
 
+interface userinfo {
+  id :string;
+  avatar :string;
+  name :string;  
+}
 @Component({
   selector: 'app-user',
   imports: [],
   templateUrl: './user.html',
   styleUrl: './user.css',
 })
+
 export class User {
-//@Input() id!:string;
-//@Input({required:true}) avatar!:string;
-//@Input() name!:string;
-@Input() user!:{
-  id :string;
-  avatar :string;
-  name :string;  
-};
+
+@Input() user!: userinfo;
 @Output() userselected=new EventEmitter();
 
 get imagePath(){
