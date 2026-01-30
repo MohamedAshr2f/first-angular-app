@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { Onetask } from './onetask/onetask';
 
 @Component({
   selector: 'app-task',
-  imports: [],
+  imports: [Onetask],
   templateUrl: './task.html',
   styleUrl: './task.css',
+
 })
 export class Task {
 @Input() name?:string;

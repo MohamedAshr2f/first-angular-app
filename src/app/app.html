@@ -10,11 +10,17 @@
          </li>
         }
    </ul>
-   <p>
-    <app-task [name]="selectedUser?.name" [avatar]="selectedUser?.avatar">
-        
+
+    @if(selectedUser)
+    {
+    <app-task [name]="selectedUser.name" [avatar]="selectedUser.avatar">
     </app-task>
-    </p>
+    }@else {
+        <p  id="fallback">
+            Select A User to see their tasks.
+        </p>
+    }
+
 </main>
 
 

@@ -1,9 +1,15 @@
-#task {
+#tasks {
   padding: 1rem;
   border-radius: 8px;
   max-height: 60vh;
   overflow: auto;
   background-color: #3a2c54;
+}
+img {
+  width: 2rem;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 header {
