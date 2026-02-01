@@ -1,11 +1,5 @@
 import { Component, Input } from '@angular/core';
-interface OnetaskModel {
-  id:string;
-  userid:string;
-  title:string;
-  summary:string;
-  duedate:string;
-}
+import { OnetaskModel } from './onetask.model';
 @Component({
   selector: 'app-onetask',
   imports: [],
