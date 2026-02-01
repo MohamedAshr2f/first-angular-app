@@ -11,6 +11,7 @@ import { userinfo } from './user.model';
 export class User {
 
 @Input() user!: userinfo;
+@Input() selected!:boolean;
 @Output() userselected=new EventEmitter();
 
 get imagePath(){
