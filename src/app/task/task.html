@@ -1,12 +1,15 @@
 <section id="tasks">
-    <img [src]= "imagePath"/>
+    <img [src]= "imagePath" [alt]="name"/>
 	<h2>{{name}}</h2>
     <menu>
         <button>Add Task</button>
         <ul>
+            @for(tak of selectedUserTasks;track tak.id)
+            {
             <li>
-                <app-onetask/>
+                <app-onetask [u_task]="tak"/>
             </li>
+           }
         </ul>
     </menu>
 </section>

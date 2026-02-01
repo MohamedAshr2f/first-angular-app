@@ -13,7 +13,7 @@
 
     @if(selectedUser)
     {
-    <app-task [name]="selectedUser.name" [avatar]="selectedUser.avatar">
+    <app-task [u_id]="selectedUser.id"[name]="selectedUser.name" [avatar]="selectedUser.avatar">
     </app-task>
     }@else {
         <p  id="fallback">
