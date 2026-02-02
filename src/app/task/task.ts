@@ -27,4 +27,7 @@ get imagePath(){
 get selectedUserTasks(){
   return this.tasks.filter(t=>t.userid===this.u_id); 
 }
+oncompleteTask(taskId:string){
+  this.tasks=this.tasks.filter(t=>t.id!==taskId);
+}
 }
