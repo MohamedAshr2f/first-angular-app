@@ -1,6 +1,8 @@
 import { Component, input, Input } from '@angular/core';
 import { Onetask } from './onetask/onetask';
 import { NewTask } from './new-task/new-task';
+import { type NewTaskModel } from './onetask/onetask.model';
+
 
 @Component({
   selector: 'app-task',
@@ -10,7 +12,7 @@ import { NewTask } from './new-task/new-task';
 
 })
 export class Task {
-@Input() u_id?:string;
+@Input() u_id!:string;
 @Input() name?:string;
 @Input() avatar?:string;
 isadding=false;
@@ -35,7 +37,17 @@ oncompleteTask(taskId:string){
 oncloseTask(){
   this.isadding=false;
 }
-onaddTask(){
+onstartaddTask(){
   this.isadding=true;
+}
+onaddTask(NewTaskModel:NewTaskModel){
+this.tasks.unshift({
+    id:new Date().getTime().toString(),
+    userid:this.u_id,
+    title:NewTaskModel.title,
+    summary:NewTaskModel.summary,
+    duedate:NewTaskModel.duedate
+  })
+  this.isadding=false;
 }
 }

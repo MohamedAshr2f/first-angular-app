@@ -1,12 +1,12 @@
 @if(isadding)
 {
-<app-new-task  (close)="oncloseTask()"/>
+<app-new-task  (close)="oncloseTask()" (add)="onaddTask($event)"/>
 }
 <section id="tasks">
     <img [src]= "imagePath" [alt]="name"/>
 	<h2>{{name}}</h2>
     <menu>
-        <button (click)="onaddTask()">Add Task</button>
+        <button (click)="onstartaddTask()">Add Task</button>
         <ul>
             @for(tak of selectedUserTasks;track tak.id)
             {

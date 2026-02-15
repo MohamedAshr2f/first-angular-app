@@ -5,3 +5,8 @@ export interface OnetaskModel {
   summary:string;
   duedate:string;
 }
+export interface NewTaskModel {
+  title:string;
+  summary:string;
+  duedate:string;
+}
