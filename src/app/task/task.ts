@@ -1,9 +1,10 @@
 import { Component, input, Input } from '@angular/core';
 import { Onetask } from './onetask/onetask';
+import { NewTask } from './new-task/new-task';
 
 @Component({
   selector: 'app-task',
-  imports: [Onetask],
+  imports: [Onetask,NewTask],
   templateUrl: './task.html',
   styleUrl: './task.css',
 
@@ -12,6 +13,7 @@ export class Task {
 @Input() u_id?:string;
 @Input() name?:string;
 @Input() avatar?:string;
+isadding=false;
 tasks=[
   {id:"t1",userid:"u1", title:'Setup Angular Project',summary:"Initialize new Angular project with CLI and configure build tools",duedate:"2024-03-12"},
   {id:"t2",userid:"u2", title:'Create Components',summary:"Build reusable Angular components with proper lifecycle hooks",duedate:"2024-08-17"},
@@ -29,5 +31,16 @@ get selectedUserTasks(){
 }
 oncompleteTask(taskId:string){
   this.tasks=this.tasks.filter(t=>t.id!==taskId);
+}
+onaddTask(){
+  this.isadding=true;
+  const newTask={
+    id:'t'+(this.tasks.length+1),
+    userid:this.u_id!,
+    title:'New Task',
+    summary:'Task Summary',
+    duedate:'2025-02-10'
+  }
+  this.tasks.push(newTask); 
 }
 }

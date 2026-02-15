@@ -1,8 +1,12 @@
+@if(isadding)
+{
+<app-new-task />
+}
 <section id="tasks">
     <img [src]= "imagePath" [alt]="name"/>
 	<h2>{{name}}</h2>
     <menu>
-        <button>Add Task</button>
+        <button (click)="onaddTask()">Add Task</button>
         <ul>
             @for(tak of selectedUserTasks;track tak.id)
             {
