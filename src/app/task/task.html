@@ -1,6 +1,6 @@
 @if(isadding)
 {
-<app-new-task />
+<app-new-task  (close)="oncloseTask()"/>
 }
 <section id="tasks">
     <img [src]= "imagePath" [alt]="name"/>

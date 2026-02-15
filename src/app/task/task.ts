@@ -32,15 +32,10 @@ get selectedUserTasks(){
 oncompleteTask(taskId:string){
   this.tasks=this.tasks.filter(t=>t.id!==taskId);
 }
+oncloseTask(){
+  this.isadding=false;
+}
 onaddTask(){
   this.isadding=true;
-  const newTask={
-    id:'t'+(this.tasks.length+1),
-    userid:this.u_id!,
-    title:'New Task',
-    summary:'Task Summary',
-    duedate:'2025-02-10'
-  }
-  this.tasks.push(newTask); 
 }
 }
