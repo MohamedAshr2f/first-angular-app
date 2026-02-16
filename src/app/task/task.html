@@ -1,6 +1,6 @@
 @if(isadding)
 {
-<app-new-task  (close)="oncloseTask()" (add)="onaddTask($event)"/>
+<app-new-task [u_id]="u_id" (close)="oncloseTask()" />
 }
 <section id="tasks">
     <img [src]= "imagePath" [alt]="name"/>

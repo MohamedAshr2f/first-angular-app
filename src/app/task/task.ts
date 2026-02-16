@@ -38,7 +38,7 @@ onstartaddTask(){
   this.isadding=true;
 }
 onaddTask(NewTaskModel:NewTaskModel){
- this.taskservice.addTask(NewTaskModel,this.u_id);
+ //this.taskservice.addTask(NewTaskModel,this.u_id);
   this.isadding=false;
 }
 }
