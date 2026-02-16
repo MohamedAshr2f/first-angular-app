@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { OnetaskModel } from './onetask.model';
 import { Card } from "../../shared/card/card";
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-onetask',
-  imports: [Card],
+  imports: [Card,DatePipe],
   templateUrl: './onetask.html',
   styleUrl: './onetask.css',
 })
