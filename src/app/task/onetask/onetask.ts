@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { OnetaskModel } from './onetask.model';
+import { Card } from "../../shared/card/card";
 @Component({
   selector: 'app-onetask',
-  imports: [],
+  imports: [Card],
   templateUrl: './onetask.html',
   styleUrl: './onetask.css',
 })
