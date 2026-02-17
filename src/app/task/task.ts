@@ -28,9 +28,7 @@ get imagePath(){
 get selectedUserTasks(){
   return this.taskservice.getTasksByUserId(this.u_id);
 }
-oncompleteTask(taskId:string){
-  this.taskservice.deleteTask(taskId);
-}
+
 oncloseTask(){
   this.isadding=false;
 }

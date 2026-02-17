@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { OnetaskModel } from './onetask.model';
 import { Card } from "../../shared/card/card";
 import { DatePipe } from '@angular/common';
+import { taskservice } from '../task.service';
 @Component({
   selector: 'app-onetask',
   imports: [Card,DatePipe],
@@ -10,9 +11,9 @@ import { DatePipe } from '@angular/common';
 })
 export class Onetask {
 @Input() u_task!:OnetaskModel;
-@Output() complete=new EventEmitter();
+private taskservice=inject(taskservice);
 oncomplete(){
-  this.complete.emit(this.u_task.id);
+  this.taskservice.deleteTask(this.u_task.id);
 }
 
 }
