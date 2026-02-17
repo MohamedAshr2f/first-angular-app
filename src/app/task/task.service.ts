@@ -16,6 +16,15 @@ export class taskservice {
   {id:"t8",userid:"u3", title:'Deploy Application', summary:"Build and deploy Angular app to production environment",duedate:"2024-11-05"},
 ];
 
+constructor() {
+const tasks=localStorage.getItem('tasks');
+
+if(tasks){
+  this.tasks=JSON.parse(tasks);
+}
+}
+
+
 getTasksByUserId(userId:string){
   return this.tasks.filter(t=>t.userid===userId);   
 }
@@ -28,10 +37,15 @@ this.tasks.unshift({
     summary:NewTaskModel.summary,
     duedate:NewTaskModel.duedate
   })
+  this.saveTasksToLocalStorage();
 } 
 
 deleteTask(taskId:string){
   this.tasks=this.tasks.filter(t=>t.id!==taskId);
+  this.saveTasksToLocalStorage();
+}
+private saveTasksToLocalStorage(){
+  localStorage.setItem('tasks',JSON.stringify(this.tasks));
 }
 
 }
