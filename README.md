@@ -42,13 +42,13 @@ git clone https://github.com/MohamedAshr2f/first-angular-app.git
 ```
 ---
 
-2️⃣ Navigate to the project directory
+### 2️⃣ Navigate to the project directory
 cd first-angular-app
 ---
-3️⃣ Install dependencies
+### 3️⃣ Install dependencies
 npm install
 ---
-4️⃣ Run the development server
+### 4️⃣ Run the development server
 ng serve
 ---
 
